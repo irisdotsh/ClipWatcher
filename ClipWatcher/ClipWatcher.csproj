@@ -11,12 +11,13 @@
 
 	<PropertyGroup>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
-		<FileVersion>1.0.0.0</FileVersion>
-		<Version>1.0.0.0</Version>
+		<FileVersion>1.0.0.1</FileVersion>
+		<Version>1.0.0.1</Version>
 		<Authors>irisdotsh</Authors>
 		<Company>irisdotsh</Company>
 		<Description>Watches a clips folder and can copy the latest clip to the clipboard and upload it to Discord via webhook.</Description>
 		<Copyright>Copyright $([System.DateTime]::Now.Year) $(Company)</Copyright>
+		<ApplicationIcon>icon.ico</ApplicationIcon>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -33,6 +34,7 @@
 		<Content Include="..\README.txt">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
+		<Content Include="icon.ico" />
 	</ItemGroup>
 
 </Project>

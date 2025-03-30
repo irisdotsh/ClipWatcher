@@ -23,13 +23,20 @@ namespace ClipUploader
 
         private void DiscordWebhookTextBox_Validating(object sender, CancelEventArgs e)
         {
-            if (!DiscordWebhookTextBox.Text.StartsWith("https://discord.com/api/webhooks/"))
+            if (!String.IsNullOrEmpty(DiscordWebhookTextBox.Text))
             {
-                ErrorProvider.SetError(DiscordWebhookTextBox, "Please enter a valid Discord webhook.");
+                if (!DiscordWebhookTextBox.Text.StartsWith("https://discord.com/api/webhooks/"))
+                {
+                    DiscordWebhookTextBoxErrorProvider.SetError(DiscordWebhookTextBox, "Please enter a valid Discord webhook.");
+                }
+                else
+                {
+                    DiscordWebhookTextBoxErrorProvider.Clear();
+                }
             }
             else
             {
-                ErrorProvider.SetError(DiscordWebhookTextBox, "");
+                DiscordWebhookTextBoxErrorProvider.Clear();
             }
         }
 

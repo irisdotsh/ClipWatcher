@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             ClipsFileSystemWatcher = new FileSystemWatcher();
             ClipsFolderBrowserDialog = new FolderBrowserDialog();
             SettingsGroupBox = new GroupBox();
@@ -46,11 +47,11 @@
             CopiedHeader = new ColumnHeader();
             UploadedHeader = new ColumnHeader();
             StatusGroupBox = new GroupBox();
-            ErrorProvider = new ErrorProvider(components);
+            DiscordWebhookTextBoxErrorProvider = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)ClipsFileSystemWatcher).BeginInit();
             SettingsGroupBox.SuspendLayout();
             StatusGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ErrorProvider).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DiscordWebhookTextBoxErrorProvider).BeginInit();
             SuspendLayout();
             // 
             // ClipsFileSystemWatcher
@@ -195,9 +196,9 @@
             StatusGroupBox.TabStop = false;
             StatusGroupBox.Text = "Status";
             // 
-            // ErrorProvider
+            // DiscordWebhookTextBoxErrorProvider
             // 
-            ErrorProvider.ContainerControl = this;
+            DiscordWebhookTextBoxErrorProvider.ContainerControl = this;
             // 
             // MainForm
             // 
@@ -207,13 +208,14 @@
             Controls.Add(StatusGroupBox);
             Controls.Add(SettingsGroupBox);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             Text = "Clip Watcher";
             ((System.ComponentModel.ISupportInitialize)ClipsFileSystemWatcher).EndInit();
             SettingsGroupBox.ResumeLayout(false);
             SettingsGroupBox.PerformLayout();
             StatusGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)ErrorProvider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DiscordWebhookTextBoxErrorProvider).EndInit();
             ResumeLayout(false);
         }
 
@@ -236,6 +238,6 @@
         private ColumnHeader UploadedHeader;
         private TextBox FilterTextBox;
         private Label FilterLabel;
-        private ErrorProvider ErrorProvider;
+        private ErrorProvider DiscordWebhookTextBoxErrorProvider;
     }
 }
