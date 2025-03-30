@@ -47,11 +47,11 @@
             CopiedHeader = new ColumnHeader();
             UploadedHeader = new ColumnHeader();
             StatusGroupBox = new GroupBox();
-            DiscordWebhookTextBoxErrorProvider = new ErrorProvider(components);
+            ErrorProvider = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)ClipsFileSystemWatcher).BeginInit();
             SettingsGroupBox.SuspendLayout();
             StatusGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)DiscordWebhookTextBoxErrorProvider).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ErrorProvider).BeginInit();
             SuspendLayout();
             // 
             // ClipsFileSystemWatcher
@@ -86,6 +86,7 @@
             FilterTextBox.Name = "FilterTextBox";
             FilterTextBox.Size = new Size(71, 23);
             FilterTextBox.TabIndex = 8;
+            FilterTextBox.Text = "*.mp4";
             FilterTextBox.TextChanged += FilterTextBox_TextChanged;
             // 
             // FilterLabel
@@ -123,7 +124,6 @@
             DiscordWebhookTextBox.Name = "DiscordWebhookTextBox";
             DiscordWebhookTextBox.Size = new Size(377, 23);
             DiscordWebhookTextBox.TabIndex = 4;
-            DiscordWebhookTextBox.Validating += DiscordWebhookTextBox_Validating;
             // 
             // DiscordWebhookLabel
             // 
@@ -196,9 +196,9 @@
             StatusGroupBox.TabStop = false;
             StatusGroupBox.Text = "Status";
             // 
-            // DiscordWebhookTextBoxErrorProvider
+            // ErrorProvider
             // 
-            DiscordWebhookTextBoxErrorProvider.ContainerControl = this;
+            ErrorProvider.ContainerControl = this;
             // 
             // MainForm
             // 
@@ -215,7 +215,7 @@
             SettingsGroupBox.ResumeLayout(false);
             SettingsGroupBox.PerformLayout();
             StatusGroupBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)DiscordWebhookTextBoxErrorProvider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ErrorProvider).EndInit();
             ResumeLayout(false);
         }
 
@@ -238,6 +238,6 @@
         private ColumnHeader UploadedHeader;
         private TextBox FilterTextBox;
         private Label FilterLabel;
-        private ErrorProvider DiscordWebhookTextBoxErrorProvider;
+        private ErrorProvider ErrorProvider;
     }
 }
