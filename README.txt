@@ -1,0 +1,1 @@
+Quick tool I made for my FFXIV world race group.  Automatically watches a clips folder to copy the latest clip to the clipboard and upload to Discord via a webhook.

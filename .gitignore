@@ -1,0 +1,8 @@
+bin/
+obj/
+.vs/
+*.csproj.user
+*.[Pp]ublish.xml
+*.pubxml
+*.pubxml.user
+*.publishproj

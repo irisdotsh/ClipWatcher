@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Platforms>x64</Platforms>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Version>1.0.0.0</Version>
+		<Authors>irisdotsh</Authors>
+		<Company>irisdotsh</Company>
+		<Description>Watches a clips folder and can copy the latest clip to the clipboard and upload it to Discord via webhook.</Description>
+		<Copyright>Copyright $([System.DateTime]::Now.Year) $(Company)</Copyright>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Discord.Net.Webhook" Version="3.17.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="..\LICENSE.txt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="..\README.txt">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+</Project>
