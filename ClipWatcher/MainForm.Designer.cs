@@ -107,6 +107,7 @@
             UploadLatestClipToDiscordCheckbox.TabIndex = 6;
             UploadLatestClipToDiscordCheckbox.Text = "Upload Latest Clip to Discord";
             UploadLatestClipToDiscordCheckbox.UseVisualStyleBackColor = true;
+            UploadLatestClipToDiscordCheckbox.CheckedChanged += UploadLatestClipToDiscordCheckbox_CheckedChanged;
             // 
             // CopyLatestClipCheckbox
             // 
@@ -117,6 +118,7 @@
             CopyLatestClipCheckbox.TabIndex = 5;
             CopyLatestClipCheckbox.Text = "Copy Latest Clip";
             CopyLatestClipCheckbox.UseVisualStyleBackColor = true;
+            CopyLatestClipCheckbox.CheckedChanged += CopyLatestClipCheckbox_CheckedChanged;
             // 
             // DiscordWebhookTextBox
             // 
@@ -124,6 +126,7 @@
             DiscordWebhookTextBox.Name = "DiscordWebhookTextBox";
             DiscordWebhookTextBox.Size = new Size(377, 23);
             DiscordWebhookTextBox.TabIndex = 4;
+            DiscordWebhookTextBox.TextChanged += DiscordWebhookTextBox_TextChanged;
             // 
             // DiscordWebhookLabel
             // 
@@ -211,6 +214,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainForm";
             Text = "Clip Watcher";
+            Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)ClipsFileSystemWatcher).EndInit();
             SettingsGroupBox.ResumeLayout(false);
             SettingsGroupBox.PerformLayout();
